@@ -1,0 +1,38 @@
+{
+  "name": "poly-ex",
+  "packageManager": "yarn@4.0.0-rc.40",
+  "description": "example poly repo manifest",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "clone:acme": "git clone $npm_package_config_repo_acme $npm_package_config_dir_acme",
+    "clone:wayne-ind": "git clone $npm_package_config_repo_wayne-ind $npm_package_config_dir_wayne-ind",
+    "clone:wakanda": "git clone $npm_package_config_repo_wakanda $npm_package_config_dir_wakanda",
+    "clone:auth-service": "git clone $npm_package_config_repo_auth-service $npm_package_config_dir_auth-service",
+    "clone:api-service": "git clone $npm_package_config_repo_api-service $npm_package_config_dir_api-service",
+    "clone:ui-components": "git clone $npm_package_config_repo_ui-components $npm_package_config_dir_ui-components",
+    "clone:all": "yarn clone:acme && yarn clone:wayne-ind && yarn clone:wakanda && yarn clone:auth-service && yarn clone:api-service && yarn clone:ui-components ",
+    "test": "echo \"Error: no test specified\" && exit 1"  
+  },
+  "config": {
+    "repo": {
+      "acme": "git@github.com:ki-sh/acme.git",
+      "wayne-ind": "git@github.com:ki-sh/wayne-ind.git",
+      "wakanda": "git@github.com:ki-sh/wakanda.git",
+      "auth-service": "git@github.com:ki-sh/auth-service.git",
+      "api-service":"git@github.com:ki-sh/api-service.git",
+      "ui-components": "git@github.com:ki-sh/ui-components.git"
+    },
+    "dir": {
+      "acme":"../apps/acme",
+      "wayne-ind":"../apps/wayne-ind",
+      "wakanda":"../apps/wakanda",
+      "auth-service": "../packages/auth-service",
+      "api-service": "../packages/api-service",
+      "ui-components": "../packages/ui-components"
+    }
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
