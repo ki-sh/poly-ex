@@ -3,7 +3,6 @@
   "packageManager": "npm run@4.0.0-rc.40",
   "description": "example poly repo manifest",
   "version": "1.0.0",
-  "main": "index.js",
   "scripts": {
     "clone:acme": "git clone $npm_package_config_repo_acme $npm_package_config_dir_acme",
     "clone:wayne_ind": "git clone $npm_package_config_repo_wayne_ind $npm_package_config_dir_wayne_ind",
@@ -12,7 +11,9 @@
     "clone:api_service": "git clone $npm_package_config_repo_api_service $npm_package_config_dir_api_service",
     "clone:ui_components": "git clone $npm_package_config_repo_ui_components $npm_package_config_dir_ui_components",
     "clone:all": "npm run clone:acme && npm run clone:wayne_ind && npm run clone:wakanda && npm run clone:auth_service && npm run clone:api_service && npm run clone:ui_components ",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "clone:frontend": "npm run clone:acme && npm run clone:wayne_ind && npm run clone:wakanda && npm run clone:ui_components ",
+    "clone:serverside": "npm run clone:auth_service && npm run clone:api_service",
+    "hoist:workspace": "cd .. && ln ./poly-ex/package.hoist.json ./package.json"
   },
   "config": {
     "repo": {

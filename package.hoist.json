@@ -1,0 +1,10 @@
+{
+    "name": "poly-ex-hoisted",
+    "description": "example poly repo workspace hoisted by symlink to poly-ex/package.hoist.json",
+    "version": "1.0.0",
+    "workspaces": [
+        "apps/*",
+        "packages/*"
+    ],
+    "useWorkspaces": true
+}
