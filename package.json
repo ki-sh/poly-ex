@@ -12,16 +12,17 @@
     "clone:all": "yarn run clone:acme && yarn run clone:wayne_ind && yarn run clone:wakanda && yarn run clone:auth_service && yarn run clone:api_service && yarn run clone:ui_components ",
     "clone:frontend": "yarn run clone:acme && yarn run clone:wayne_ind && yarn run clone:wakanda && yarn run clone:ui_components ",
     "clone:serverside": "yarn run clone:auth_service && yarn run clone:api_service",
-    "hoist:workspace": "cd .. && ln -s ./poly-ex/package.hoist.json ./package.json && echo 'should now have ../package.json symlinked to poly-ex/package.hoist.json'"
+    "hoist:workspace": "cd .. && ln -s ./poly-ex/package.hoist.json ./package.json && echo 'should now have ../package.json symlinked to poly-ex/package.hoist.json'",
+    "checker":"echo $npm_package"
   },
   "config": {
     "repos": {
-      "acme": "https://github.com/ki-sh/acme.git",
-      "wayne_ind": "https://github.com/ki-sh/wayne-ind.git",
-      "wakanda": "https://github.com/ki-sh/wakanda.git",
-      "auth_service": "https://github.com/ki-sh/auth-service.git",
-      "api_service": "https://github.com/ki-sh/api-service.git",
-      "ui_components": "https://github.com/ki-sh/ui-components.git"
+      "acme": "git@github.com:ki-sh/acme.git",
+      "wayne_ind": "git@github.com:ki-sh/wayne-ind.git",
+      "wakanda": "git@github.com:ki-sh/wakanda.git",
+      "auth_service": "git@github.com:ki-sh/auth-service.git",
+      "api_service": "git@github.com:ki-sh/api-service.git",
+      "ui_components": "git@github.com:ki-sh/ui-components.git"
     },
     "dirs": {
       "acme": "../apps/acme",

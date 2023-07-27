@@ -11,8 +11,15 @@ Example of an approach to poly repo setup utilising
 
 The approach is to fork this repo, configure config.repos and config.dirs in package.json to your repos and their locations to checkout to. You can have different tasks for different teams, as shown her we have clone:all / clone:frontend / clone:serverside. So subsets of the repos may be used by different teams/other organisational reasons.
 
+## Install
 ```
-My_Poly_Repo
+#from dir above using kish nr (npm run)
+nr poly-ex clone:all
+nr poly-ex hoist:workspace
+
+# file strucutre:
+
+Top_level_containing_dir
     package.json #yarn workspace configured, symlinked to poly-ex/package.hoist.json
     |-apps
         |-acme
@@ -28,9 +35,9 @@ The top level package.json is symlinked so it is under source control in your po
 sub repo issues with git.
 run in top level dir:
 `$> yarn install`
-This installs any packages for the workspaces specified (apps/* and packages/* in example.)
+This installs any packages for the workspaces specified (apps/* and packages/* in example.), and links workspaces up.
 
-kish is useful especially for yarn (y/yr) and git operations without having to cd from the top level directory. 
+kish is useful especially for yarn (y/yr) and git operations without having to cd from the top level directory. You will typically want to automate running tasks across multiple repos/folders eg test,dev, build, deploy. You can do this in package.json scripts, see dev.sh for one way of doing such multi tasks using kish.
 
 ## Hybridization
 
