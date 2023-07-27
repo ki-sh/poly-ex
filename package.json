@@ -1,22 +1,21 @@
 {
   "name": "poly-ex",
-  "packageManager": "npm run@4.0.0-rc.40",
-  "description": "example poly repo manifest",
+  "description": "example poly repos manifest. run hoist:worksapce and choice of clone: tasks",
   "version": "1.0.0",
   "scripts": {
-    "clone:acme": "git clone $npm_package_config_repo_acme $npm_package_config_dir_acme",
-    "clone:wayne_ind": "git clone $npm_package_config_repo_wayne_ind $npm_package_config_dir_wayne_ind",
-    "clone:wakanda": "git clone $npm_package_config_repo_wakanda $npm_package_config_dir_wakanda",
-    "clone:auth_service": "git clone $npm_package_config_repo_auth_service $npm_package_config_dir_auth_service",
-    "clone:api_service": "git clone $npm_package_config_repo_api_service $npm_package_config_dir_api_service",
-    "clone:ui_components": "git clone $npm_package_config_repo_ui_components $npm_package_config_dir_ui_components",
-    "clone:all": "npm run clone:acme && npm run clone:wayne_ind && npm run clone:wakanda && npm run clone:auth_service && npm run clone:api_service && npm run clone:ui_components ",
-    "clone:frontend": "npm run clone:acme && npm run clone:wayne_ind && npm run clone:wakanda && npm run clone:ui_components ",
-    "clone:serverside": "npm run clone:auth_service && npm run clone:api_service",
-    "hoist:workspace": "cd .. && ln ./poly-ex/package.hoist.json ./package.json"
+    "clone:acme": "git clone $npm_package_config_repos_acme $npm_package_config_dirs_acme",
+    "clone:wayne_ind": "git clone $npm_package_config_repos_wayne_ind $npm_package_config_dirs_wayne_ind",
+    "clone:wakanda": "git clone $npm_package_config_repos_wakanda $npm_package_config_dirs_wakanda",
+    "clone:auth_service": "git clone $npm_package_config_repos_auth_service $npm_package_config_dirs_auth_service",
+    "clone:api_service": "git clone $npm_package_config_repos_api_service $npm_package_config_dirs_api_service",
+    "clone:ui_components": "git clone $npm_package_config_repos_ui_components $npm_package_config_dirs_ui_components",
+    "clone:all": "yarn run clone:acme && yarn run clone:wayne_ind && yarn run clone:wakanda && yarn run clone:auth_service && yarn run clone:api_service && yarn run clone:ui_components ",
+    "clone:frontend": "yarn run clone:acme && yarn run clone:wayne_ind && yarn run clone:wakanda && yarn run clone:ui_components ",
+    "clone:serverside": "yarn run clone:auth_service && yarn run clone:api_service",
+    "hoist:workspace": "cd .. && ln -s ./poly-ex/package.hoist.json ./package.json && echo 'should now have ../package.json symlinked to poly-ex/package.hoist.json'"
   },
   "config": {
-    "repo": {
+    "repos": {
       "acme": "https://github.com/ki-sh/acme.git",
       "wayne_ind": "https://github.com/ki-sh/wayne-ind.git",
       "wakanda": "https://github.com/ki-sh/wakanda.git",
@@ -24,7 +23,7 @@
       "api_service": "https://github.com/ki-sh/api-service.git",
       "ui_components": "https://github.com/ki-sh/ui-components.git"
     },
-    "dir": {
+    "dirs": {
       "acme": "../apps/acme",
       "wayne_ind": "../apps/wayne-ind",
       "wakanda": "../apps/wakanda",
