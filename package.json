@@ -12,8 +12,7 @@
     "clone:all": "yarn run clone:acme && yarn run clone:wayne_ind && yarn run clone:wakanda && yarn run clone:auth_service && yarn run clone:api_service && yarn run clone:ui_components ",
     "clone:frontend": "yarn run clone:acme && yarn run clone:wayne_ind && yarn run clone:wakanda && yarn run clone:ui_components ",
     "clone:serverside": "yarn run clone:auth_service && yarn run clone:api_service",
-    "hoist:workspace": "cd .. && ln -s ./poly-ex/package.hoist.json ./package.json && echo 'should now have ../package.json symlinked to poly-ex/package.hoist.json'",
-    "checker":"echo $npm_package"
+    "hoist:workspace": "cd .. && ln -s ./poly-ex/package.hoist.json ./package.json && echo 'should now have ../package.json symlinked to poly-ex/package.hoist.json'"
   },
   "config": {
     "repos": {
